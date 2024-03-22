@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+  }
+  nav a {
+    color: rgb(255, 0, 0);
+  }
+  
+  h1 {
+    color: rgb(8, 8, 8);
+    font-size: calc(100% + 5px);
+  } 
+  h1 {
+    color: #fc006d;
+  }
+  h2 {
+    color: #fc006d;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    color: #010101;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .jeu {
+    width: 500px;
+    height: 200px;
+    border: 0;
+    border-bottom: 1px solid #18f;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .joueur {
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    transition: left 0.3s;
+  }
+  
+  .ennemi {
+    width: 20px;
+    height: 50px;
+        background-color: black ; 
+        color: #000000;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    border-radius: 50%;
+    animation: anime-ennemi 2.5s infinite;
+    position: absolute;
+    transition: right 0.3s;
+    background-image: url(im-transparent.png); /* Remplace "ennemi-transparent.png" par le chemin vers ton image transparente */
+    background-size: cover;  
+}
+  
+
+/* Styles pour les boutons */
+.control button {
+  display: inline-block;
+  text-decoration: none;
+  color: #f200ff;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.control button:hover {
+  background-color: #ac0000;
+}
+
+/* Styles pour les barres de santé */
+.health-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #000000;
+  border: 1px solid #18f;
+  margin-top: 10px;
+  position: relative;
+}
+
+.health-joueur {
+  width: 5px;
+  height: 5px;
+  background-color: #18f;
+  transition: width 0.2s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.health-ennemi {
+  width: 5px;
+  height: 5px;
+  background-color: #ac0000;
+  transition: width 0.2s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.health-ennemi {
+  right: 0; /* Modifier la position pour l'ennemi */
+  left: initial; /* Réinitialiser la position pour l'ennemi */
+}
+
+  
+  .joueur img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+  }
+  .no-background {
+    background-color: transparent;
+  }
+  
+  .ennemi img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    background-color: transparent;
+    background-image: transparent;  
+}
+  
+  .animation {
+    animation: jump 0.2s ease-in-out;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-100px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-60px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .attaque {
+    animation: attack 0.3s ease-in-out;
+  }
+  
+  @keyframes attack {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  #restartButton {
+    color: rgb(0, 238, 194); 
+    background-color: rgb(11, 10, 10); 
+    
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .movement-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  
+  .movement-table th {
+    text-align: center;
+    background-color:transparent;
+   color: rgb(5, 5, 5) ;
+    padding: 10px;
+  }
+  
+  .movement-table td {
+    padding: 10px;
+  }
+  
+  .player-movement-table,
+  .enemy-movement-table {
+    background-color: transparent;
+    color: rgb(112, 240, 13) ;
+  }
+  
+  .player-movement-table th,
+  .enemy-movement-table th {
+    background-color: transparent;
+    color: rgb(255, 0, 0) ;
+  }
+  
+  .separator {    background-color: transparent;
+    color: blue ;
+  }
+  

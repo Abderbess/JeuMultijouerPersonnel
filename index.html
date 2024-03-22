@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <nav>
+        <a href="presentation.html">Qui suis-je ? </a>
+      </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de combat</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+  
+       body {
+            background-image: url(fond1.png);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+ <br>   <h1>MON PROPRE JEU</h1> </br>
+    <ul>
+        <li>Bienvenue dans "Mon Propre Jeu"</li>
+        <li>Un jeu de combat multijoueur où vous incarnez des puissants combattant</li>
+    </ul>
+    <div class="control">
+        <button id="bouton-jouer">Jouer</button>
+    </div>
+
+    <div class="jeu">
+        <div class="joueur">
+            <img src="img.png" alt="Personnage">
+        </div>
+        <div class="ennemi no-background">
+            <img src="im.png" alt="Ennemi">
+        </div>
+    </div>
+<br>
+    <div id="chrono">00:00:00</div>
+</br>
+<br>
+<button id="restartButton" class="restartButton">Restart</button>
+</br>   
+<section>
+        <div class="health-bar health-joueur">
+          <div class="health-joueur-inner"></div>
+        </div>
+      </section>
+  
+      <section>
+        <div class="health-bar health-ennemi">
+          <div class="health-ennemi-inner"></div>
+        </div>    
+        <table class="movement-table">
+            <tr>
+                <th colspan="3">Mouvement</th>
+            </tr>
+            <tr>
+                <td>
+                    <table class="player-movement-table">
+                        <tr>
+                            <th>Personnage</th>
+                        </tr>
+                        <tr>
+                            <td> Touche Personnage :</td>
+                            <td>move-left : ⬅️</td>
+                            <td>move-right : ➡️</td>
+                            <td>jump : ⬆️</td>
+                            <td>attaque : "Espace"</td>
+                        </tr>   
+                 </table>
+                </td>
+          
+            <td class="separator"></td>
+                <td>
+                    <table class="enemy-movement-table">
+                        <tr>
+                            <th>Ennemi</th>
+                        </tr>
+                        <tr>
+                            <td> Touche Ennemi :</td>
+                            <td>move-left : 4</td>
+                            <td>move-right : 6</td>
+                            <td>jump : 8</td>
+                            <td>attaque : "0"</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+</br>
+
+
+
+
+    <h2>Que le meilleur gagne </h2>
+
+    <script src="script.js"></script>
+<br>
+
+</body>
+</html>
